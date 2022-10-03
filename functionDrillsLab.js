@@ -233,7 +233,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function printAllNames (arrayNames ){
+  for (let i=0; i < arrayNames.length; i++){
+    console.log(arrayNames[i])
+  }
+}
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -244,6 +249,17 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd (num1){
+  if (num1%2===0){
+    return "That's not odd!"
+  }
+  else {
+    return "That is odd indeed!"
+  }
+}
+
+//console.log(thatsOdd(7))//Test performed as required
+oddChecker = thatsOdd(6)
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -257,6 +273,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+const bestMovie = (MOVIEPARAM) => `${MOVIEPARAM} is the best movie ever!`
+console.log(bestMovie("sharknado"))
 
 
 ////////////////// PROBLEM 15 ////////////////////
