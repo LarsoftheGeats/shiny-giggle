@@ -289,6 +289,22 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall (arr) {
+  let answers = []
+  for (let i = 0; i < arr.length; i++)
+  {
+    if (arr[i]> 100)
+    {
+      answers.push('big')
+    }
+    else {
+      answers.push('small')
+    }
+  }
+  return answers;
+}
+
+console.log(bigOrSmall(bigOrSmallArray))
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -300,6 +316,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator (players, out){
+  for (let i = 0; i < players.length; i++){
+    if (out === players[i]){
+      players.splice(i,1)
+    }
+  }
+  return players
+}
+//console.log(theEliminator(contestants,loser))
 
 
 ////////////////// PROBLEM 17 ////////////////////
@@ -310,6 +335,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function capsLock(inputString){
+  console.log(inputString.toUpperCase())
+}
+capsLock(sampleString)
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -323,6 +352,20 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck (emailParam){
+  let sample=String(emailParam)
+  sample=sample.trim()
+  if (sample.includes("@")){
+    return "Email verified"
+  }
+  else{
+    return "Must provide a valid email adress"
+  }
+
+}
+//console.log(emailCheck("Jongmail.com"))//invalid prints properly
+
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -330,6 +373,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function howManyICanBuy(galleon){
+  return galleon/3
+}
+console.log(howManyICanBuy(14))
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -338,6 +385,18 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function howManyICanBuy2(galleon){
+  if (galleon<Infinity){
+    let totalFrogs = 0;
+    while (galleon >=3){
+      totalFrogs++
+      galleon -=3
+    }
+    return  totalFrogs;}
+  else return infinity
+}
+console.log(howManyICanBuy2(16))
+
 
 
 ////////////////// PROBLEM 21 ////////////////////
@@ -347,6 +406,16 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+function arrayIncreasing (arr1){
+  for (let i = 0; (i+1) < arr1.length; i++){
+    if (arr1[i]>arr1[i+1]){
+      //console.log(i)
+      return false
+    }
+  }
+  return true;
+}
+console.log(arrayIncreasing(sampleArray))//returned flse, on switching index 5 to 4.5 it became true
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -371,13 +440,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['duck', 'rubberDuck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['sailorDuck','rubberDuck','duck']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['realDuck','duck']
